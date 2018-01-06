@@ -36,4 +36,19 @@ y_pred = regressor.predict(X_test)
 # Confusion Matrix
 from sklearn.metrics import confusion_matrix
 cm = confusion_matrix(y_true = y_test, y_pred = y_pred)
-    
+
+# New Data
+x_new = ['x','b','o','o','x','b','x','o','x']
+y_new = ['positive']
+x_new = label_x.transform(x_new)
+y_new = label_y.transform(y_new)
+
+# New Predict
+y_pred_2 = regressor.predict(x_new)
+
+# Write
+row = 'x,b,o,o,x,b,x,o,x,positive'
+
+f = open('tic-tac-toe.csv','a')
+f.write(row)
+f.close()
