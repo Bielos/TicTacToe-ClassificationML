@@ -48,7 +48,7 @@ y_pred_2 = regressor.predict(x_new)
 
 # Write
 def write_dataset():
-    row = 'x,b,o,o,x,b,x,o,x,positive'
+	row = 'x,b,o,o,x,b,x,o,x,positive'
 	f = open('tic-tac-toe.csv','a')
 	f.write(row)
 	f.close()
